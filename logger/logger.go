@@ -1005,9 +1005,6 @@ func (t *fileHandler) write(bs []byte) (n int, e error) {
 }
 
 func (t *fileHandler) mustBackUp(addsize int) bool {
-	if t._fileSize == 0 {
-		return false
-	}
 	timerFlag := false
 	sizeFlag := false
 	if t._cutmode&_TIMEMODE == _TIMEMODE {
